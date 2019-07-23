@@ -1,12 +1,13 @@
 <h3>STUDENT REGISTRATION FORM</h3>
 
- 
+<form [formGroup]="studentProfileForm" (ngSubmit)="onSubmit()"> 
 <table align="center" cellpadding = "10">
  
 <!----- First Name ---------------------------------------------------------->
+
 <tr>
-<td>FIRST NAME</td>
-<td><input type="text" name="First_Name" maxlength="30"/>
+<td>FIRST NAME</td>`
+<td><input type="text" formControlName="First_Name" maxlength="30"/>
 (max 30 characters a-z and A-Z)
 </td>
 </tr>
@@ -14,12 +15,14 @@
 <!----- Last Name ---------------------------------------------------------->
 <tr>
 <td>LAST NAME</td>
-<td><input type="text" name="Last_Name" maxlength="30"/>
+<td><input type="text" formControlName="Last_Name" maxlength="30"/>
 (max 30 characters a-z and A-Z)
 </td>
 </tr>
- 
+</form>
+
 <!----- Date Of Birth -------------------------------------------------------->
+<form [formGroup]="dateofbirth">
 <tr>
 <td>DATE OF BIRTH</td>
  
@@ -118,6 +121,7 @@
 </select>
 </td>
 </tr>
+</form>
  
 <!----- Email Id ---------------------------------------------------------->
 <tr>
@@ -144,6 +148,7 @@ Female <input type="radio" name="Gender" value="Female" />
 </tr>
  
 <!----- Address ---------------------------------------------------------->
+<form [FormGroup]="studentProfileForm">
 <tr>
 <td>ADDRESS <br /><br /><br /></td>
 <td><textarea name="Address" rows="4" cols="30"></textarea></td>
@@ -178,6 +183,7 @@ Female <input type="radio" name="Gender" value="Female" />
 <td>COUNTRY</td>
 <td><input type="text" name="Country" value="India" readonly="readonly" /></td>
 </tr>
+</form>
  
 <!----- Hobbies ---------------------------------------------------------->
  
@@ -201,6 +207,7 @@ Others
 </tr>
  
 <!----- Qualification---------------------------------------------------------->
+<form [FormGroup]="studentProfileForm">
 <tr>
 <td>QUALIFICATION <br /><br /><br /><br /><br /><br /><br /></td>
  
@@ -257,8 +264,10 @@ Others
  
 </td>
 </tr>
- 
+</form>
+
 <!----- Course ---------------------------------------------------------->
+
 <tr>
 <td>COURSES<br />APPLIED FOR</td>
 <td>
