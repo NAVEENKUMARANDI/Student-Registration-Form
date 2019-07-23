@@ -32,10 +32,10 @@ export class StudentRegistrationFormComponent implements OnInit {
     }),
 
     hobbies: new FormArray([
-      Drawing: new FormArray[''],
-      singing: new FormArray[''],
-      dancing: new FormArray[''],
-      others: new FormArray['']
+      Drawing: new FormControl[''],
+      singing: new FormControl[''],
+      dancing: new FormControl[''],
+      others: new FormControl['']
     ]),
 
     qualification: new FormGroup({
